@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-07-05T06:37:50.289607+00:00",
+  "simulations": [
+    {
+      "id": "SIM-01",
+      "scenario": "브릿지론 만기 60일 전 본PF 조건 미확정",
+      "decision": "STOP",
+      "owner": "CFO/재무책임자",
+      "evidence": "PF exposure map, term sheet status, equity funded proof",
+      "manual_location": "Phase 5 / WS-01",
+      "training_scenario": "브릿지론 만기 60일 전 본PF 전환성 drill",
+      "reason": "본PF term sheet 또는 equity 납입이 없으면 신규 보증·차입 금지"
+    },
+    {
+      "id": "SIM-02",
+      "scenario": "토지 잔금 전 가압류 또는 지장물 발견",
+      "decision": "STOP",
+      "owner": "개발PM, 법무",
+      "evidence": "title opinion, red-flag checklist, 잔금집행 checklist",
+      "manual_location": "Phase 2 / WS-03",
+      "training_scenario": "잔금 전 가압류·지장물 발견 drill",
+      "reason": "권리하자·지장물 비용 미반영 시 잔금 지급 금지"
+    },
+    {
+      "id": "SIM-03",
+      "scenario": "인허가 심의 2회 보류와 주민 민원",
+      "decision": "STOP_REPRICE_OR_ESCALATE",
+      "owner": "개발PM, 인허가 대행, 법무",
+      "evidence": "쟁점표, Q&A pack, 대안안 비교표, 금융비용 재산정",
+      "manual_location": "Phase 4 / WS-04",
+      "training_scenario": "심의 2회 보류와 주민민원 tabletop",
+      "reason": "금융비용 재산정과 대안안 승인 전 PF 착수 중지"
+    },
+    {
+      "id": "SIM-04",
+      "scenario": "시공사 공사비 15% 증액 요구",
+      "decision": "STOP_PENDING_QS_AND_APPROVAL",
+      "owner": "CM, 개발PM, 재무, 법무",
+      "evidence": "claim ledger, QS report, 하도급 지급확인",
+      "manual_location": "Phase 6 / WS-05",
+      "training_scenario": "공사비 15% 증액 요구 negotiation drill",
+      "reason": "5% 이상 증액은 독립 QS와 변경승인 전 착수 금지"
+    },
+    {
+      "id": "SIM-05",
+      "scenario": "분양률 50% 미만, PF EOD 근접",
+      "decision": "STOP_ESCALATE",
+      "owner": "마케팅, 법무, 재무",
+      "evidence": "분양률 dashboard, legal signoff, HUG/EOD memo",
+      "manual_location": "Phase 7 / WS-02",
+      "training_scenario": "분양률 50% 미만 EOD 근접 drill",
+      "reason": "가격정책·광고·재분양 의사결정 tree를 리스크위원회로 격상"
+    },
+    {
+      "id": "SIM-06",
+      "scenario": "준공 후 잔금 미납과 하자 집단 claim",
+      "decision": "STOP_OR_APPROVE_WITH_RESERVE",
+      "owner": "재무, CS, 법무, 세무",
+      "evidence": "defect log, reserve calculation, refund SLA, tax closing memo",
+      "manual_location": "Phase 8 / WS-12",
+      "training_scenario": "잔금미납·하자 집단 claim drill",
+      "reason": "정산 검증 전 PF 상환·분양보증 해지 금지"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-07-05T06:37:50.215948+00:00",
+  "case_count": 63,
+  "workstream_counts": {
+    "WS-01": 20,
+    "WS-02": 5,
+    "WS-03": 8,
+    "WS-04": 6,
+    "WS-05": 6,
+    "WS-07": 3,
+    "WS-06": 5,
+    "WS-08": 3,
+    "WS-09": 4,
+    "WS-10": 2,
+    "WS-11": 1
+  },
+  "workstreams": [
+    {
+      "code": "WS-00",
+      "name": "Version Governance",
+      "location": "PART 1 / Appendix A",
+      "control": "원본·작업본·승인본 SHA, diff, 승인 로그를 변경 전후로 잠근다.",
+      "evidence": "source_preservation_report, version_change_log, approval_log",
+      "training": "작업본만 편집하는 diff review drill"
+    },
+    {
+      "code": "WS-01",
+      "name": "PF 자본구조·보증의존도",
+      "location": "Phase 3 / Phase 5",
+      "control": "자기자본 단계, 보증총량, DSCR, repayment source, cash waterfall를 Gate 조건으로 둔다.",
+      "evidence": "PF exposure map, term sheet, equity 입금증",
+      "training": "브릿지론 만기 60일 전 본PF 전환성 drill"
+    },
+    {
+      "code": "WS-02",
+      "name": "분양광고·HUG·환급",
+      "location": "Phase 3 / Phase 7 / Phase 8",
+      "control": "광고문구 법무승인, 미확정 개발계획 disclaimer, 환급·재분양 decision tree를 둔다.",
+      "evidence": "legal signoff, 광고 evidence binder, HUG 사고 SOP",
+      "training": "분양률 50% 미만 EOD 근접 drill"
+    },
+    {
+      "code": "WS-03",
+      "name": "토지 DD Red-Flag",
+      "location": "Phase 1 / Phase 2",
+      "control": "유치권·분묘·문화재·접도·토양오염·지장물별 stop condition을 분리한다.",
+      "evidence": "title opinion, red-flag checklist, 잔금집행 checklist",
+      "training": "잔금 전 가압류·지장물 발견 drill"
+    },
+    {
+      "code": "WS-04",
+      "name": "인허가·민원 Stakeholder",
+      "location": "Phase 1 / Phase 4",
+      "control": "stakeholder map, 주민반대 issue log, 대안안 관리대장을 필수 증빙으로 둔다.",
+      "evidence": "쟁점표, Q&A pack, 회의록, 대안안 비교표",
+      "training": "심의 2회 보류와 주민민원 tabletop"
+    },
+    {
+      "code": "WS-05",
+      "name": "공사비·시공사·하도급",
+      "location": "Phase 5 / Phase 6 / Phase 8",
+      "control": "claim ledger, 독립 QS trigger, 하도급 DD, hold-point, step-in 절차를 둔다.",
+      "evidence": "QS report, claim ledger, 하도급 지급확인",
+      "training": "공사비 15% 증액 요구 negotiation drill"
+    },
+    {
+      "code": "WS-06",
+      "name": "계약·판례·분쟁 SOP",
+      "location": "Phase 2 / 4 / 5 / 7 / Appendix D",
+      "control": "계약특약 library, 법무 signoff log, dispute escalation ladder를 운영한다.",
+      "evidence": "계약 redline, 외부법무 의견, 판례 tracker",
+      "training": "책임준공·분양광고 조항 redline drill"
+    },
+    {
+      "code": "WS-07",
+      "name": "조직/RACI·승인권한",
+      "location": "PART 1 / All Gates",
+      "control": "Gate별 RACI, 투자심의, 리스크위원회, 대체승인, 인수인계를 명시한다.",
+      "evidence": "RACI matrix, 회의록, 위임전결표",
+      "training": "대표 부재·담당자 퇴사 대체승인 drill"
+    },
+    {
+      "code": "WS-08",
+      "name": "세무·회계·SPC·자금통제",
+      "location": "Phase 2 / 3 / 5 / 8",
+      "control": "취득세 taxonomy, VAT 안분, SPC 계좌, funds-flow, tax memo trigger를 둔다.",
+      "evidence": "tax memo, 계좌대장, 증빙 binder",
+      "training": "계약변경 tax memo trigger drill"
+    },
+    {
+      "code": "WS-09",
+      "name": "VDR·개인정보·증거보존",
+      "location": "All Phases / Appendix A",
+      "control": "VDR taxonomy, 권한표, 개인정보 inventory, 다운로드 로그, 72시간 사고대응을 둔다.",
+      "evidence": "VDR index, permission matrix, access log",
+      "training": "개인정보 사고 72시간 tabletop"
+    },
+    {
+      "code": "WS-10",
+      "name": "부동산개발업 컴플라이언스",
+      "location": "PART 1 / Appendix E",
+      "control": "등록요건, 전문인력, 사무실, 변경보고, 사업실적보고 calendar를 둔다.",
+      "evidence": "compliance calendar, roster, 제출증빙",
+      "training": "전문인력 퇴사·변경보고 누락 drill"
+    },
+    {
+      "code": "WS-11",
+      "name": "실패사례 기반 교육훈련",
+      "location": "PART 1 / Every Phase End",
+      "control": "case card, Gate drill, red-team review, check ride, 분기 회고를 운영한다.",
+      "evidence": "training roster, drill score, after-action review",
+      "training": "신규 담당자 90일 onboarding check ride"
+    },
+    {
+      "code": "WS-12",
+      "name": "준공·하자·미분양 Exit",
+      "location": "Phase 7 / Phase 8",
+      "control": "defect triage, reserve policy, 환급 SLA, 미분양 보유/임대/벌크매각 tree를 둔다.",
+      "evidence": "defect log, reserve calc, refund SLA, exit memo",
+      "training": "준공 후 잔금미납·하자 집단 claim drill"
+    }
+  ]
+}

@@ -1,0 +1,1078 @@
+{
+  "created_at": "2026-07-05T04:40:29.741086+00:00",
+  "phase": "Phase A baseline for v1.1 manual production",
+  "gap_matrix_path": "<REPO_ROOT>/manual_v1_gap_matrix.json",
+  "gap_matrix_sha256": "a4c48fa08859718d824516cc66af35505864135e1ca77800ddbe993bc4ffbb0c",
+  "working_docx": "<REPO_ROOT>/부동산개발_시스템_아파트시행매뉴얼_v1.1_WORKING.docx",
+  "working_docx_sha256": "97295f7b7b25f2d100ef8202a5b88176fd1c31465b732591f6acce6ee9cbad20",
+  "meta": {
+    "created_at": "2026-07-05T02:39:41.204804+00:00",
+    "manual_structure_json": "<REPO_ROOT>/manual_v1_structure.json",
+    "manual_v1_extracted_md": "<REPO_ROOT>/manual_v1_extracted.md",
+    "obsidian_inventory_md": "<REPO_ROOT>/obsidian_inventory.md",
+    "failure_case_db": "<REPO_ROOT>/failure_case_db_v0.1.jsonl",
+    "failure_case_row_count_actual": 63,
+    "synthesis_claimed_row_count": 64,
+    "allowed_statuses": [
+      "COVERED",
+      "PARTIAL",
+      "MISSING",
+      "OUTDATED",
+      "DUPLICATE"
+    ],
+    "core_axis_count": 12,
+    "core_axes_required": [
+      "PF",
+      "분양",
+      "토지",
+      "인허가",
+      "시공",
+      "법률",
+      "조직",
+      "세무·회계·SPC",
+      "데이터룸·문서관리",
+      "개발업 컴플라이언스",
+      "교육훈련",
+      "준공 후 정산"
+    ],
+    "core_axes_reviewed": [
+      "PF",
+      "분양",
+      "토지",
+      "인허가",
+      "시공",
+      "법률",
+      "조직",
+      "세무·회계·SPC",
+      "데이터룸·문서관리",
+      "개발업 컴플라이언스",
+      "교육훈련",
+      "준공 후 정산"
+    ],
+    "manual_paragraph_count": 197,
+    "manual_table_count": 75,
+    "manual_heading_count": 61
+  },
+  "counts": {
+    "core_axis_total": 12,
+    "core_axis_open_or_partial": 12,
+    "phase_sections_total": 61,
+    "phase_sections_open_or_partial": 60,
+    "blind_spots": 4,
+    "carry_forward_followups": 1
+  },
+  "axis_items": [
+    {
+      "id": "AX-01",
+      "axis": "PF",
+      "status": "OUTDATED",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "Phase 3",
+        "Phase 5"
+      ],
+      "key_gaps": [
+        "자기자본 5/10/15/20% 제도 tracker와 투자심의 stop-line 부재",
+        "보증의존도·차주별 exposure map·cash waterfall 검증 항목 부족",
+        "본PF 전환 실패 60~90일 전 자동 재평가 및 신규 익스포저 차단 기준 부족"
+      ],
+      "reinforcement_controls": [
+        "PF 자본구조·보증의존도 별도 장 신설",
+        "본PF 전환성 checklist와 exposure map을 Gate 3/PF Closing 필수 증빙으로 편입",
+        "regulatory_update_tracker와 연동해 PF 제도 변경 시 threshold 재검토"
+      ],
+      "case_count": 60,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-ECFR-HVCRE",
+        "S-ECFR-LENDING"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-02",
+      "axis": "분양",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 3",
+        "Phase 7",
+        "Phase 8"
+      ],
+      "key_gaps": [
+        "분양광고 표현 승인/증빙보존 workflow 부재",
+        "계약해제·환급·HUG 사고 시나리오 SOP 부족",
+        "Obsidian에 기록된 실거래가 기반 P50~P75 도구가 v1.0 본문에 통합되지 않음"
+      ],
+      "reinforcement_controls": [
+        "분양광고 legal signoff와 disclaimer library",
+        "계약해제·환급·재분양 decision tree",
+        "P50~P75 실거래가 산정표를 Phase 3/7 필수 입력으로 편입"
+      ],
+      "case_count": 58,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DOBONG-CHANGDONG",
+        "S-EDAILY-MAPLE",
+        "S-FDIC-CRISIS",
+        "S-FSC-TY-20231228"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-03",
+      "axis": "토지",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 1",
+        "Phase 2"
+      ],
+      "key_gaps": [
+        "유치권·분묘·문화재·접도·토양오염·지장물별 중단조건이 하나의 표준 DD pack으로 묶여 있지 않음",
+        "매도인/counterparty DD와 자금집행 조건부 통제가 부족"
+      ],
+      "reinforcement_controls": [
+        "토지 DD red-flag chapter 신설",
+        "Gate 1에 stop/approve matrix와 법무의견서 필수화",
+        "계약특약 library와 잔금집행 evidence checklist"
+      ],
+      "case_count": 63,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-ECFR-HVCRE"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-04",
+      "axis": "인허가",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 1",
+        "Phase 3",
+        "Phase 4"
+      ],
+      "key_gaps": [
+        "stakeholder map과 민원 issue log 부재",
+        "심의 보류/반려 시 대안안·자료보완 playbook 부족",
+        "장기보류 시 금융비용/브릿지론 영향 자동 연결 부족"
+      ],
+      "reinforcement_controls": [
+        "인허가·민원 stakeholder chapter 신설",
+        "공람 전 Q&A pack과 회의록/쟁점표 증빙화",
+        "인허가 지연 금융비용 재산정 trigger를 Gate 2/3에 연결"
+      ],
+      "case_count": 63,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-ECFR-HVCRE"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-05",
+      "axis": "시공",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 5",
+        "Phase 6",
+        "Phase 8"
+      ],
+      "key_gaps": [
+        "공사비 증액 claim ledger와 증빙서류 표준 부재",
+        "하도급업체 재무/기술 DD 및 default/step-in 절차 부족",
+        "공정률 70% 이후 변경·정산 승인권한 강화 기준 부족"
+      ],
+      "reinforcement_controls": [
+        "공사비·책임준공·신탁 chapter에 claim ledger 편입",
+        "하도급·시공사 counterparty DD pack",
+        "공정률 hold-point와 변경승인 RACI 설정"
+      ],
+      "case_count": 57,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DOBONG-CHANGDONG",
+        "S-EDAILY-MAPLE",
+        "S-EKN-BANGHWA",
+        "S-FDIC-CRISIS"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-06",
+      "axis": "법률",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 2",
+        "Phase 4",
+        "Phase 5",
+        "Phase 7",
+        "Appendix D"
+      ],
+      "key_gaps": [
+        "법령 Annex가 static reference라 최신성 검증 주기 부재",
+        "분양광고/환급/신탁/책준/유치권 판례별 SOP 부족",
+        "계약 조항 library와 법무 승인 로그 부재"
+      ],
+      "reinforcement_controls": [
+        "법률 레퍼런스 시트를 living tracker로 전환",
+        "분쟁 유형별 escalation ladder와 법무 signoff log",
+        "계약특약 library를 Phase 2/5/7에 연결"
+      ],
+      "case_count": 63,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-ECFR-HVCRE"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-07",
+      "axis": "조직",
+      "status": "MISSING",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "PART 1",
+        "All Phases"
+      ],
+      "key_gaps": [
+        "대표 감 의존을 줄이는 승인권한표와 RACI 부재",
+        "리스크위원회/투자심의/변경승인 운영규정 부재",
+        "퇴사·인수인계·대체승인 체계 부족"
+      ],
+      "reinforcement_controls": [
+        "조직·권한·RACI chapter 신설",
+        "Gate별 approver/evidence/meeting minute 표준화",
+        "key-person contingency와 인수인계 checklist"
+      ],
+      "case_count": 42,
+      "source_refs_sample": [
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DOBONG-CHANGDONG",
+        "S-EDAILY-MAPLE",
+        "S-EKN-BANGHWA",
+        "S-FSC-TY-20231228",
+        "S-FSC-TY-20240108",
+        "S-HUG-NOTICE-37172"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-08",
+      "axis": "세무·회계·SPC",
+      "status": "MISSING",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "Phase 2",
+        "Phase 3",
+        "Phase 5",
+        "Phase 8"
+      ],
+      "key_gaps": [
+        "취득세 cost taxonomy와 VAT 안분 worksheet 부재",
+        "SPC 설립/자금집행/계정과목/증빙보존 통제 부족",
+        "계약변경·정산 시 tax memo trigger 부재"
+      ],
+      "reinforcement_controls": [
+        "세무·회계·SPC chapter 신설",
+        "funds-flow matrix와 계좌/증빙 대장",
+        "계약변경 tax memo와 정산 전 세무 검토 gate"
+      ],
+      "case_count": 63,
+      "source_refs_sample": [
+        "S-APRA-APG112",
+        "S-APRA-APS112",
+        "S-ASIC-PROBUILD",
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-ECFR-HVCRE"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-09",
+      "axis": "데이터룸·문서관리",
+      "status": "MISSING",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "Appendix A",
+        "All Phases"
+      ],
+      "key_gaps": [
+        "data room index와 folder taxonomy 부재",
+        "권한표·다운로드 로그·개인정보 최소수집 기준 부재",
+        "72시간 신고 tabletop 등 개인정보 사고 대응 부재"
+      ],
+      "reinforcement_controls": [
+        "데이터룸·개인정보·증빙보존 chapter 신설",
+        "VDR signoff와 permission matrix",
+        "개인정보 inventory 및 사고 대응 drill"
+      ],
+      "case_count": 24,
+      "source_refs_sample": [
+        "S-DNB-CRE",
+        "S-DOBONG-CHANGDONG",
+        "S-GLA-AUDIT",
+        "S-GOVUK-CFG",
+        "S-KCA-NEWAPT",
+        "S-KDA-REG",
+        "S-KDA-REPORT",
+        "S-LAW-124907",
+        "S-LAW-149211",
+        "S-LAW-157317",
+        "S-LAW-167291",
+        "S-LAW-179847"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-10",
+      "axis": "개발업 컴플라이언스",
+      "status": "MISSING",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "PART 1",
+        "All Phases"
+      ],
+      "key_gaps": [
+        "개발업 등록요건과 변경보고 calendar 부재",
+        "전문인력 증빙 roster와 교육 이력 관리 부재",
+        "사업실적보고·협회/관청 제출 증빙 부재"
+      ],
+      "reinforcement_controls": [
+        "개발업 컴플라이언스 chapter 신설",
+        "등록·변경·실적보고 calendar",
+        "전문인력 roster와 evidence binder"
+      ],
+      "case_count": 6,
+      "source_refs_sample": [
+        "S-DNB-CRE",
+        "S-KDA-REG",
+        "S-KDA-REPORT",
+        "S-LAW-DEVENFORCE",
+        "S-LAW-DEVLAW",
+        "S-LAW-DEVQUAL",
+        "S-LAW-MGMT-20977",
+        "S-MOLIT-MGMT-20250501",
+        "S-PIPC-12010"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-11",
+      "axis": "교육훈련",
+      "status": "MISSING",
+      "priority": "P0",
+      "affected_v1_sections": [
+        "PART 1",
+        "All Phases"
+      ],
+      "key_gaps": [
+        "초보자 onboarding syllabus 부재",
+        "실패사례 DB를 훈련 시나리오로 바꾸는 절차 부재",
+        "Gate 통과 drill과 평가표 부재"
+      ],
+      "reinforcement_controls": [
+        "초보자 교육·시뮬레이션 chapter 신설",
+        "case-based drill deck와 역할별 check ride",
+        "분기별 재교육 및 오류사례 회고 프로세스"
+      ],
+      "case_count": 6,
+      "source_refs_sample": [
+        "S-KCA-NEWAPT",
+        "S-KDA-REG",
+        "S-LAW-206096",
+        "S-LAW-DEVENFORCE",
+        "S-LAW-DEVQUAL",
+        "S-LAW-MGMT-20977",
+        "S-MOLIT-MGMT-20250501",
+        "S-PIPC-11453"
+      ],
+      "carry_forward_to_v1_1": true
+    },
+    {
+      "id": "AX-12",
+      "axis": "준공 후 정산",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "affected_v1_sections": [
+        "Phase 7",
+        "Phase 8"
+      ],
+      "key_gaps": [
+        "하자 triage와 반복하자 원인분석/재교육 연결 부족",
+        "환급·해지·잔금미납 SLA와 책임자 부재",
+        "미분양 보유/임대/벌크매각 exit decision tree 부족"
+      ],
+      "reinforcement_controls": [
+        "준공 후 정산·하자·exit chapter 보강",
+        "defect triage와 reserve policy",
+        "미분양/환급/입주율 stress trigger를 Gate 5에 연결"
+      ],
+      "case_count": 55,
+      "source_refs_sample": [
+        "S-BLOTER-DAEJO",
+        "S-BP-DUNCHON",
+        "S-DART-DAEWOO",
+        "S-DART-MEDICOX",
+        "S-DATA-HUG-15002597",
+        "S-DATA-HUG-15058809",
+        "S-DOBONG-CHANGDONG",
+        "S-EDAILY-MAPLE",
+        "S-FDIC-CRISIS",
+        "S-FSC-TY-20231228",
+        "S-FSC-TY-20240108",
+        "S-HUG-NOTICE-37172"
+      ],
+      "carry_forward_to_v1_1": true
+    }
+  ],
+  "phase_section_items": [
+    {
+      "id": "SEC-001",
+      "section": "PART 1. 시스템 아키텍처",
+      "style": "Heading 1",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 20,
+      "audit_note": "구조는 우수하나 원본/버전 거버넌스, 운영권한, 데이터룸 통제가 빠져 실제 운영체계로는 보강 필요."
+    },
+    {
+      "id": "SEC-002",
+      "section": "1.1 3계층(Layer) 구조",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 22,
+      "audit_note": "3층 개념은 있으나 리스크 DB 운영/증거/교육 연계가 미구현."
+    },
+    {
+      "id": "SEC-004",
+      "section": "1.3 Gate 시스템 (단계별 관문)",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 30,
+      "audit_note": "Gate 구조는 있으나 G002에서 나온 stop condition, owner, evidence, escalation 필드가 부족."
+    },
+    {
+      "id": "SEC-005",
+      "section": "1.4 문서 활용 가이드",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 34,
+      "audit_note": "활용 가이드는 있으나 원본 보존·작업본·승인로그·diff 절차가 없음."
+    },
+    {
+      "id": "SEC-006",
+      "section": "PART 2. 아파트 시행 실무 매뉴얼 v1.0",
+      "style": "Heading 1",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 36,
+      "audit_note": "8 Phase 골격은 강하지만 G002 12축 중 신규 운영축 5개 이상이 독립 장으로 없음."
+    },
+    {
+      "id": "SEC-007",
+      "section": "Phase 1. 사업기획 및 토지 발굴",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 38,
+      "audit_note": "입지/수지 기준은 있으나 최신 PF 자본구조, 환경·보험, 이해관계자 초기 map 보강 필요."
+    },
+    {
+      "id": "SEC-008",
+      "section": "1-1. 토지 정보 수집 채널",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 41,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-009",
+      "section": "1-2. 입지 분석 체크리스트",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 45,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-010",
+      "section": "1-3. 초기 사업성 검토 (예비 사업수지)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 49,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-011",
+      "section": "1-4. 실패 사례 & 교훈",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 51,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-012",
+      "section": "Phase 2. 토지 확보 및 실사 (Due Diligence)",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 54,
+      "audit_note": "법률/물리 실사는 있으나 red-flag stop condition과 counterparty DD 보강 필요."
+    },
+    {
+      "id": "SEC-013",
+      "section": "2-1. 법률 실사 (Legal Due Diligence)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 57,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-014",
+      "section": "2-2. 물리적 실사",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 59,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-015",
+      "section": "2-3. 매매계약 핵심 특약",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 61,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-016",
+      "section": "2-4. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 63,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-017",
+      "section": "Phase 3. 사업타당성 분석",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 66,
+      "audit_note": "민감도 분석은 좋으나 실거래가 P50~P75 도구, tax/SPC/funds-flow, PF 제도 tracker 연결 필요."
+    },
+    {
+      "id": "SEC-018",
+      "section": "3-1. 사업수지표 구성 항목",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 69,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-019",
+      "section": "3-2. 시나리오 분석 (Sensitivity Analysis)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 71,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-020",
+      "section": "3-3. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 77,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-021",
+      "section": "Phase 4. 인허가",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 80,
+      "audit_note": "인허가 절차는 있으나 주민·민원·도시계획위원회 쟁점 pack과 장기보류 대응 보강 필요."
+    },
+    {
+      "id": "SEC-022",
+      "section": "4-1. 인허가 프로세스 개요",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 83,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-023",
+      "section": "4-2. 설계사무소 선정 및 관리",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 85,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-024",
+      "section": "4-3. 심의 대응 전략",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 87,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-025",
+      "section": "4-4. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 89,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-026",
+      "section": "Phase 5. PF (Project Financing) 자금조달",
+      "style": "Heading 2",
+      "status": "OUTDATED",
+      "priority": "P0",
+      "paragraph_index": 92,
+      "audit_note": "PF 구조와 책준은 다루지만 2026~2027 PF 제도 전환, 자기자본/보증의존도/repayment source 통제가 최신화 필요."
+    },
+    {
+      "id": "SEC-027",
+      "section": "5-1. PF 자금조달 구조 이해",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 95,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-028",
+      "section": "5-2. 시공사 선정 및 도급계약",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 97,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-029",
+      "section": "5-3. PF 금융구조 설계 핵심",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 99,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-030",
+      "section": "5-3-1. [v1.0] 책임준공형 관리형 토지신탁 의사결정",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 101,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-031",
+      "section": "5-3-2. 책임준공 기한 도과 리스크 관리",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 106,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-032",
+      "section": "5-3-3. PF 출구전략 (Contingency Plan)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 108,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-033",
+      "section": "5-4. 분양보증",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 113,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-034",
+      "section": "5-5. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 115,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-035",
+      "section": "Phase 6. 시공 관리",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 118,
+      "audit_note": "유치권/QS/중대재해 보강은 좋으나 공사비 claim ledger, 하도급 DD, hold-point가 부족."
+    },
+    {
+      "id": "SEC-036",
+      "section": "6-1. 시행사의 시공관리 역할",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 121,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-037",
+      "section": "6-2. 설계변경 관리 프로세스",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 123,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-038",
+      "section": "6-3. [v1.0] 시공사 부도 시 유치권 방어 플랜",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 125,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-039",
+      "section": "6-4. [v1.0] 공사비 증액(에스컬레이션) 분쟁 해결 프로세스",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 130,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-040",
+      "section": "6-5. 중대재해처벌법 — 시행사(발주자)의 의무",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 135,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-041",
+      "section": "6-6. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 137,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-042",
+      "section": "Phase 7. 분양 및 마케팅",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 139,
+      "audit_note": "분양가/HUG/미분양은 있으나 광고문구 법무승인, 환급 SOP, 분양대행사 리스크 통제 부족."
+    },
+    {
+      "id": "SEC-043",
+      "section": "7-1. 분양 시점 결정",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 142,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-044",
+      "section": "7-2. 분양가 산정",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 144,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-045",
+      "section": "7-3. 미분양 대응 전략",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 147,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-046",
+      "section": "7-4. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 149,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-047",
+      "section": "Phase 8. 준공 및 정산",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 152,
+      "audit_note": "정산/하자 기본은 있으나 defect triage, reserve, 미분양 exit, 환급 SLA 보강 필요."
+    },
+    {
+      "id": "SEC-048",
+      "section": "8-1. 사용검사 프로세스",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 155,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-049",
+      "section": "8-2. 입주 관리",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 157,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-050",
+      "section": "8-3. PF 상환 및 최종 정산",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 160,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-051",
+      "section": "8-4. 하자 관리",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 162,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-052",
+      "section": "8-5. 핵심 리스크 & 실패 사례",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 166,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-053",
+      "section": "PART 3. 부록",
+      "style": "Heading 1",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 169,
+      "audit_note": "부록은 유용하지만 운영대장·VDR·법령 최신성 tracker가 빠짐."
+    },
+    {
+      "id": "SEC-054",
+      "section": "부록 A. 단계별 필수 서류 총괄표",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 171,
+      "audit_note": "서류 목록은 있으나 데이터룸 taxonomy/권한/보존기한이 없음."
+    },
+    {
+      "id": "SEC-055",
+      "section": "부록 B. 핵심 용어 사전",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 174,
+      "audit_note": "핵심 용어는 있으나 최신 PF/개발업/개인정보/세무 용어 보강 필요."
+    },
+    {
+      "id": "SEC-056",
+      "section": "부록 C. 향후 확장 로드맵",
+      "style": "Heading 2",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 177,
+      "audit_note": "사업유형 확장 방향은 있으나 v1.x 현장검증 governance와 승인 기준이 부족."
+    },
+    {
+      "id": "SEC-057",
+      "section": "부록 D. 법령 레퍼런스 시트",
+      "style": "Heading 2",
+      "status": "OUTDATED",
+      "priority": "P0",
+      "paragraph_index": 182,
+      "audit_note": "법령 reference는 static이므로 current-law tracker와 최신성 확인 주기가 필요."
+    },
+    {
+      "id": "SEC-058",
+      "section": "D-1. 중대재해 처벌 등에 관한 법률",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 186,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-059",
+      "section": "D-2. 하자담보책임 (공동주택관리법)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 188,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-060",
+      "section": "D-3. 분양가 상한제 (주택법)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 192,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    },
+    {
+      "id": "SEC-061",
+      "section": "D-4. 도급계약 물가변동(에스컬레이션)",
+      "style": "Heading 3",
+      "status": "PARTIAL",
+      "priority": "P1",
+      "paragraph_index": 194,
+      "audit_note": "세부항목은 v1.0에 존재하나 G002 실패사례 기준의 owner/trigger/evidence/stop-line 형태로 재작성 필요."
+    }
+  ],
+  "blind_spots": [
+    {
+      "id": "G003-BS-A",
+      "status": "reinforced",
+      "finding": "Obsidian 20_WIKI/부동산개발_시스템 경로가 현재본 1개와 백업 4개로 분산되어 있어 단일 경로만 보면 최신/이전 차이를 놓칠 수 있음.",
+      "reinforcement": "obsidian_inventory.md에 5개 경로, 해시, mtime, heading/wiki-link 목록을 모두 기록; source preservation C003에서 현재본/백업 source 파일 무변경 검증 예정.",
+      "carry_forward_to_g004": "플랜에는 canonical source path와 archive comparison policy를 포함."
+    },
+    {
+      "id": "G003-BS-B",
+      "status": "reinforced",
+      "finding": "SYNTHESIS.md는 DB 64건이라고 적지만 실제 failure_case_db_v0.1.jsonl은 63행이며 G002 검증도 63건으로 통과함.",
+      "reinforcement": "manual_v1_gap_matrix.json은 실제 JSONL 63건을 기준으로 계산; G004에서 숫자 표기 정정/검증 항목으로 승격.",
+      "carry_forward_to_g004": "최종 플랜에는 evidence count normalization을 작업항목으로 포함."
+    },
+    {
+      "id": "G003-BS-C",
+      "status": "reinforced",
+      "finding": "v1.0은 실무 절차가 강하지만 원본 보존, 작업본, 변경이력, diff, 승인 로그가 문서 운영체계로 없음.",
+      "reinforcement": "C003 preservation criterion과 source_preservation_audit.md를 추가; G004에는 version governance chapter를 포함.",
+      "carry_forward_to_g004": "매뉴얼 개정 전 original/read-only/source-of-truth policy를 첫 단계로 배치."
+    },
+    {
+      "id": "G003-BS-D",
+      "status": "reinforced",
+      "finding": "G002 12축 중 개발업 컴플라이언스, 데이터룸·개인정보, 세무·회계·SPC, 교육훈련, 조직/RACI는 v1.0에서 독립 운영장으로 확인되지 않음.",
+      "reinforcement": "manual_v1_gap_matrix.json에서 MISSING으로 분류하고 각각 별도 chapter/control로 carry-forward 지정.",
+      "carry_forward_to_g004": "종합 실행 플랜의 필수 보강 장으로 편입."
+    }
+  ],
+  "carry_forward_followups": [
+    {
+      "id": "G004-FU-A",
+      "source": "<REPO_ROOT>/comprehensive_manual_execution_plan.md",
+      "status": "open",
+      "work": "aside-browser 실패 후 insane-search/curl_cffi로 공식 HTML/PDF 재검증 완료. `부동산 개발사업 실적 확인제`는 재검증 완료 상태로 유지하되, 세부 시행일·서식은 후속 고시/협회 안내 확인 대상으로 v1.1 backlog에 유지한다."
+    }
+  ]
+}

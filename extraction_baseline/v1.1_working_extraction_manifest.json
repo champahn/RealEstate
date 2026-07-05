@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-07-05T04:35:30.925894+00:00",
+  "input_docx": "<REPO_ROOT>/부동산개발_시스템_아파트시행매뉴얼_v1.1_WORKING.docx",
+  "input_sha256": "97295f7b7b25f2d100ef8202a5b88176fd1c31465b732591f6acce6ee9cbad20",
+  "method": "OOXML word/document.xml text/table extraction",
+  "output_markdown": "<REPO_ROOT>/extraction_baseline/v1.1_working.md",
+  "output_markdown_sha256": "87eed6cfab3cc37e7bee04ba40195c62f68829608578e056831416d542f1e7e1",
+  "paragraph_count": 197,
+  "nonempty_paragraph_count": 85,
+  "heading_count": 0,
+  "table_count": 75,
+  "table_row_count": 288
+}
